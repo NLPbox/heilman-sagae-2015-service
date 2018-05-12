@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t heilman-sagae-docker .
+
+script:
+  - docker run --entrypoint=pytest -ti heilman-sagae-service test_api.py
