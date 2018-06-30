@@ -7,13 +7,21 @@ This docker container allows you to build, install and run the
 [ Heilman and Sagae (2015) RST discourse parser](https://github.com/EducationalTestingService/discourse-parsing)
 in a docker container with an added REST API.
 
-## build
+## build/run
 
+You can either build the container locally and then run it like this:
+
+```
 docker build -t heilman-sagae-service .
-
-## run
-
 docker run -p 8000:8000 -ti heilman-sagae-service
+```
+
+Or, you can just download/run a pre-built container from Docker Hub:
+
+```
+docker run -p 8000:8000 -ti nlpbox/heilman-sagae-2015-service
+```
+
 
 ## Usage Examples
 
