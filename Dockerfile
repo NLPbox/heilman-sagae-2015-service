@@ -1,4 +1,4 @@
-FROM nlpbox/heilman-sagae-2015:2018-05-30
+FROM nlpbox/heilman-sagae-2015:2018-10-27
 
 RUN pip3 install hug==2.4.0 pexpect==4.5.0 pytest==3.5.1
 
