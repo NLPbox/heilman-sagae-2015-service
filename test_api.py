@@ -24,10 +24,8 @@ def start_api():
 
 def test_api_plaintext():
     """The heilman-sagae-2015-service API produces the expected plaintext parse output."""
-    res = requests.post(
-        'http://localhost:8000/parse',
-        files={'input': INPUT_TEXT},
-        data={'output_format': 'output'})
+    res = requests.post('http://localhost:8000/parse',
+                        files={'input': INPUT_TEXT})
     
     result_str = res.content.decode('utf-8')
     json_produced = json.loads(result_str)

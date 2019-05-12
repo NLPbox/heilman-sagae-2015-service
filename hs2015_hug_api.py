@@ -31,12 +31,7 @@ def call_parser(body, response):
 
         try:
             parser_stdout = parser(input_file.name, _cwd=PARSER_PATH)
-        
-            if body['output_format'] == b'nltk-tree-png':
-                raise NotImplementedError
-        
-            else: # always fall back to the 'original' output format of the parser
-                return OUTPUT_FILEPATH
+            return OUTPUT_FILEPATH
         except sh.ErrorReturnCode_1 as err:
             response.status = HTTP_500
             trace = str(err.stderr, 'utf-8')
